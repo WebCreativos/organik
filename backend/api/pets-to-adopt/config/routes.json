@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pets-to-adopt",
+      "handler": "pets-to-adopt.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pets-to-adopt/generatePicture/:id",
+      "handler": "pets-to-adopt.generatePicture",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pets-to-adopt/count",
+      "handler": "pets-to-adopt.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pets-to-adopt/:id",
+      "handler": "pets-to-adopt.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pets-to-adopt",
+      "handler": "pets-to-adopt.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pets-to-adopt/:id",
+      "handler": "pets-to-adopt.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pets-to-adopt/:id",
+      "handler": "pets-to-adopt.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

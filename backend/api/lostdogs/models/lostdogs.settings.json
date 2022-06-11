@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lostdogs",
+  "info": {
+    "name": "Lostdogs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Perro",
+        "Gato",
+        "Otro"
+      ],
+      "default": "Perro"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Encontrado",
+        "Perdido"
+      ],
+      "default": "Perdido"
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "info": {
+      "type": "text",
+      "required": true
+    },
+    "pictures": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "lat": {
+      "type": "float",
+      "required": true
+    },
+    "lng": {
+      "type": "float",
+      "required": true
+    }
+  }
+}

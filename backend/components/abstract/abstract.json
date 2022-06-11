@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_abstract_abstracts",
+  "info": {
+    "name": "Abstract",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "cellphone": {
+      "type": "integer"
+    }
+  }
+}

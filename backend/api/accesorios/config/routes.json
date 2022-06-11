@@ -1,0 +1,51 @@
+{
+    "routes": [{
+            "method": "GET",
+            "path": "/accesorio",
+            "handler": "accesorios.find",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/accesorio/count",
+            "handler": "accesorios.count",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "GET",
+            "path": "/accesorio/:id",
+            "handler": "accesorios.findOne",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "POST",
+            "path": "/accesorio",
+            "handler": "accesorios.create",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "PUT",
+            "path": "/accesorio/:id",
+            "handler": "accesorios.update",
+            "config": {
+                "policies": []
+            }
+        },
+        {
+            "method": "DELETE",
+            "path": "/accesorio/:id",
+            "handler": "accesorios.delete",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}

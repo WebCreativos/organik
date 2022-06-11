@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Finished",
+        "Rejected",
+        "Payed"
+      ],
+      "default": "Pending"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "products": {
+      "type": "component",
+      "repeatable": true,
+      "component": "products.products"
+    },
+    "address": {
+      "model": "customer-address"
+    },
+    "payment_method": {
+      "type": "enumeration",
+      "enum": [
+        "Money",
+        "Coins"
+      ]
+    }
+  }
+}

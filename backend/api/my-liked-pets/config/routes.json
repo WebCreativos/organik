@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/my-liked-pets",
+      "handler": "my-liked-pets.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/my-liked-pets/count",
+      "handler": "my-liked-pets.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/my-liked-pets/:id",
+      "handler": "my-liked-pets.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/my-liked-pets",
+      "handler": "my-liked-pets.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/my-liked-pets/:id",
+      "handler": "my-liked-pets.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/my-liked-pets/:id",
+      "handler": "my-liked-pets.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

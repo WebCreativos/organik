@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orden_ventas",
+  "info": {
+    "name": "Orden venta"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "producto": {
+      "model": "productos"
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "Pendiente",
+        "Rechazado",
+        "Pago"
+      ]
+    }
+  }
+}

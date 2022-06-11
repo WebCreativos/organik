@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_liked_pets",
+  "info": {
+    "name": "My Liked Pets"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "pet": {
+      "model": "pets-to-adopt"
+    },
+    "like": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

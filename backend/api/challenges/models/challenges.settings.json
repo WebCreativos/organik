@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "challenges",
+  "info": {
+    "name": "challenges"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "cant": {
+      "type": "integer",
+      "required": true
+    },
+    "coins": {
+      "type": "integer",
+      "required": true
+    },
+    "challenge_name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

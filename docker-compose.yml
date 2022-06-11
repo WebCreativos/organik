@@ -1,0 +1,48 @@
+backend:
+  restart: always
+  build:
+    ./backend/
+  environment:
+    - HOST=0.0.0.0
+    - NODE_ENV=development
+  command:
+    "npm run develop"
+  env_file:
+    - .env
+  volumes:
+    - ./backend/api:/usr/src/app/api
+    - ./backend/components:/usr/src/app/components
+    - ./backend/extensions:/usr/src/app/extensions
+  links:
+    - mysql
+  ports:
+    - "1337:1337"
+
+frontend:
+  restart: always
+  build:
+    ./frontend/
+  environment:
+    - API_URL=http://api.localhost/
+  command:
+    "npm run start"
+  links:
+    - backend
+
+nginx:
+  restart: always
+  build: ./nginx/
+  ports:
+    - "80:80"
+  links:
+    - backend
+    - frontend
+
+mysql:
+  restart: always
+  volumes:
+    - lazo:/var/lib/mysql
+  image: mysql:5.7
+  env_file:
+    - .env
+

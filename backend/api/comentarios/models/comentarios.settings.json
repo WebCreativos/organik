@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comentarios",
+  "info": {
+    "name": "comentarios"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "contenido": {
+      "type": "text"
+    },
+    "publicacion": {
+      "model": "publicaciones"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Perro",
+        "Gato"
+      ],
+      "default": "Perro"
+    }
+  }
+}

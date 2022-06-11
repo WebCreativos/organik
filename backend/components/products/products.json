@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_products_products",
+  "info": {
+    "name": "products",
+    "icon": "cart-plus"
+  },
+  "options": {},
+  "attributes": {
+    "cant": {
+      "type": "integer"
+    },
+    "product": {
+      "model": "productos"
+    }
+  }
+}

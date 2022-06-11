@@ -1,0 +1,27 @@
+{
+    "kind": "collectionType",
+    "collectionName": "subcategorias",
+    "info": {
+        "name": "Subcategoria"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true
+    },
+    "attributes": {
+        "titulo": {
+            "type": "string"
+        },
+        "categorias_padre": {
+            "model": "categorias"
+        },
+        "descripcion": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "uid",
+            "targetField": "titulo",
+            "required": true
+        }
+    }
+}

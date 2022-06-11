@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pets-to-adopt",
+  "info": {
+    "name": "Mascotas en adopciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "pictures": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "city": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "integer"
+    }
+  }
+}

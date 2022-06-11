@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/orden-ventas",
+      "handler": "orden-venta.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orden-ventas/count",
+      "handler": "orden-venta.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orden-ventas/:id",
+      "handler": "orden-venta.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/orden-ventas",
+      "handler": "orden-venta.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/orden-ventas/:id",
+      "handler": "orden-venta.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/orden-ventas/:id",
+      "handler": "orden-venta.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

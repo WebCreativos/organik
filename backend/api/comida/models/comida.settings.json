@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comidas",
+  "info": {
+    "name": "Comida"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "animal": {
+      "type": "enumeration",
+      "enum": [
+        "perro",
+        "gato"
+      ]
+    },
+    "peso": {
+      "type": "integer"
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "cachorro",
+        "joven",
+        "adulto"
+      ]
+    },
+    "producto": {
+      "model": "productos"
+    }
+  }
+}

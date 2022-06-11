@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mascotas",
+  "info": {
+    "name": "mascotas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "id_collar": {
+      "type": "string",
+      "unique": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "profile_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Perro",
+        "Gato",
+        "Otro"
+      ]
+    },
+    "castrado": {
+      "type": "boolean"
+    },
+    "nacimiento": {
+      "type": "date"
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": [
+        "macho",
+        "hembra"
+      ]
+    }
+  }
+}

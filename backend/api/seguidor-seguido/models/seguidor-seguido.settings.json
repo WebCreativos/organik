@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seguidor_seguidos",
+  "info": {
+    "name": "SeguidorSeguido"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "seguidor": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "seguido": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

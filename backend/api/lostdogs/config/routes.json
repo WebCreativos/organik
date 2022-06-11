@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lostdogs",
+      "handler": "lostdogs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lostdogs/count",
+      "handler": "lostdogs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lostdogs/:id",
+      "handler": "lostdogs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lostdogs",
+      "handler": "lostdogs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lostdogs/:id",
+      "handler": "lostdogs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lostdogs/:id",
+      "handler": "lostdogs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
